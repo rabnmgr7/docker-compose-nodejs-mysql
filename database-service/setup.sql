@@ -18,12 +18,15 @@ CREATE TABLE EMPLOYEE (
 INSERT INTO EMPLOYEE (FirstName, LastName, Phone, Address, City, FullName, Email, Pin, CreationDate, EmployeeCode)
 VALUES ('SYSADMIN', 'SYSADMIN', 945214775, 'Av. Alfonso Ugarte', 'Lima', 'SYSADMIN SYSADMIN', 'sysadmin@gmail.com',
         1, '2011-12-18 13:17:17', 'SYSADMIN');
-
+INSERT INTO EMPLOYEE (FirstName, LastName, Phone, Address, City, FullName, Email, Pin, CreationDate, EmployeeCode)
+VALUES ('Rabin', 'Lamtage', 9846683648, 'Lumbini', 'Butwal', 'Rabin Lamtage', 'rabinlamtage7@gmail.com',
+        2, '2011-12-18 13:17:17', 'DevOps');
 DROP PROCEDURE IF EXISTS sp_GetEmployee;
 DELIMITER //
 CREATE PROCEDURE sp_GetEmployee()
   BEGIN
     SELECT * FROM EMPLOYEE;
+    SELECT * FROM EMPLOYEE WHERE FirstName='Rabin';
   END //
 DELIMITER ;
 /**Drop StoreProcedure**/
